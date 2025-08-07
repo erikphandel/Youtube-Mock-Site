@@ -1,9 +1,10 @@
 .video-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
     column-gap: 8px;
     row-gap: 22px;
-    padding: 20px;
+    padding: 24px 10px;
 }
 
 @media (max-width: 750px) {
@@ -12,15 +13,10 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .video-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
 .video-preview {
     padding: 4px;
     vertical-align: top;
+    max-width: 620px;
 }
 
 .thumbnail-row {
@@ -30,6 +26,7 @@
 
 .thumbnail {
     width: 100%;
+    border-radius: 10px
 }
 
 .video-time {
@@ -65,7 +62,7 @@
 .video-author, 
 .video-stats {
     font-size: 12px;
-    color: rgb(96, 96, 96);
+    color: #AAAAAA;
 }
 
 .video-author {
