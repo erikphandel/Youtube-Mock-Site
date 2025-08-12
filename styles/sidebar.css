@@ -7,14 +7,24 @@
     width: 207px;
     z-index: 101;
     color: #f1f1f1;
+    padding-top: 12px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #0f0f0f;
 }
+
 .sidebar-section {
     border-bottom: 1px solid #4d4d4d;
-    padding: 12px;
+    padding: 0 12px 12px 12px;
     margin-bottom: 12px;
 }
 .sidebar-link,
-.sidebar-link-selected {
+.sidebar-link-selected,
+.sidebar-link-you,
+.sidebar-link-subscription,
+.sidebar-link-subscription-title {
     height: 36px;
     display: flex;
     justify-content: left;
@@ -32,17 +42,45 @@
     font-weight: 500;
 }
 
-.sidebar-link:hover {
+.sidebar-link:hover,
+.sidebar-link-you:hover,
+.sidebar-link-subscription:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.sidebar-link-you img{
+    height: 12px;
+    margin-left: 6px;
+}
+
+.sidebar-link-you p {
+    font-size: 15px;
+    font-weight: 500;
+}
 .sidebar-link img,
-.sidebar-link-selected img {
-    height: 24px;
+.sidebar-link-selected img,
+.sidebar-link-subscription img {
+    height: 22px;
     margin-right: 18px; 
 }
 
-.sidebar-link div {
+.sidebar-link div,
+.sidebar-link-subscription div {
     font-size: 13px;
     font-weight: 400;
+    white-space: nowrap;
+}
+
+.sidebar-link-subscription-title {
+    height: 28px;
+}
+
+.sidebar-link-subscription-title p {
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.sidebar-link-subscription img {
+    border-radius: 11px;
 }

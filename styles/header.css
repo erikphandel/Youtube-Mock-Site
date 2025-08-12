@@ -4,12 +4,11 @@
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    background-color: #0f0f0f;
-    opacity: 0.8;
+    background-color: #0f0f0fca;
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 16px;
+    padding: 0;
     z-index: 100;
 }
 
@@ -20,8 +19,8 @@
 
 .hamburger-menu {
     height: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -44,27 +43,31 @@
 
 .middle-section {
     flex: 1;
-    margin-left: 70px;
+    margin-left: 100px;
     margin-right: 35px;
-    max-width: 500px;
+    max-width: 580px;
     display: flex;
     align-items: center;
 }
 
 .search-bar {
     flex: 1;
-    height: 36px;
+    height: 32px;
     padding-left: 12px;
-    font-size: 16px;
+    font-size: 10px;
     -webkit-font-smoothing: antialiased;
-    border: 1px solid rgb(204, 204, 204);
-    border-radius: 2px;
+    border: 1px solid hsl(0,0%,18.82%);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.05);
     width: 0;
+    background-color: #121212;
+    z-index: 101;
 }
 
 .search-bar::placeholder {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .search-button, 
@@ -80,12 +83,14 @@
 }
 
 .search-button {
-    height: 40px;
-    width: 66px;
-    background-color: #f7f7f7;
+    height: 36px;
+    width: 56px;
+    background-color: hsla(0,0%,100%,.08);
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(192, 192, 192);
+    border-color: hsl(0,0%,18.82%);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     margin-left: -1px;
     margin-right: 10px;
 }
@@ -96,7 +101,7 @@
 .apps-icon-container .tooltip, 
 .notification-icon-container .tooltip {
     position: absolute;
-    background-color: rgba(96, 96, 96, 0.9);
+    background-color: rgba(96, 96, 96, 1);
     color: white;
     padding: 8px;
     border-radius: 2px;
@@ -118,7 +123,7 @@
 }
 
 .search-icon {
-    height: 25px;
+    height: 22px;
 }
 
 .voice-search-button {
@@ -126,7 +131,7 @@
     width: 40px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(248, 248, 248);
+    background-color: hsla(0,0%,100%,.08);
 }
 
 .voice-search-icon {
@@ -143,12 +148,26 @@
     flex-shrink: 0;
 }
 
-.upload-icon {
-    height: 24px;
+.create-button {
+    height: 34px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: hsla(0,0%,100%,.08);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0px 5px;
+    padding-right: 15px;
 }
 
-.apps-icon {
-    height: 24px;
+.create-button p {
+    padding-top: 10px;
+}
+
+.create-icon {
+    height: 36px;
+    fill: white;
 }
 
 .notification-icon-container {
@@ -175,22 +194,27 @@
 }
 
 .my-channel {
-    height: 32px;
-    border-radius: 16px;
+    height: 30px;
+    border-radius: 15px;
     cursor: pointer;
+}
+
+:root {
+    --grid-max-width: calc((620px * 3) + (8px * 2));
 }
 
 .topic-bar {
     top: 50px;
-    background-color: #0f0f0f;
-    opacity: 0.8;;
+    background-color: #0f0f0fca;
     position: fixed;
     display: flex;
-    justify-content: center;
-    right: 0;
+    justify-content: flex-start;
+    padding-left: calc((100% - var(--grid-max-width))/3);
+    right: 0px;
     left: 240px;
     height: 50px;
     z-index: 100;
+    padding-top: 10px;
 }
 
 .topic-button,
@@ -203,10 +227,10 @@
     cursor: pointer;
     white-space: nowrap;
     font-weight: 500;
-    padding: 10px;
+    padding: 8px 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
     margin: 7px;
     height: 13px;
 }
