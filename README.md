@@ -1,0 +1,1 @@
+A mock YouTube home page, used to practice CSS and HRML. Initially built following the instructions of the SuperSimpleDev online CSS and HTML course (https://youtu.be/G3e-cpL7ofc); that can be found on the as-in-exercise branch. I later updated the page to the modern (8/13/2025) YouTube homepage in Dark mode.
