@@ -8,7 +8,7 @@
     z-index: 101;
     color: #f1f1f1;
     padding-top: 12px;
-    height: 100vh;
+    height: calc(100vh-50px);
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -73,6 +73,7 @@
 
 .sidebar-link-subscription-title {
     height: 28px;
+    cursor: default;
 }
 
 .sidebar-link-subscription-title p {
@@ -83,4 +84,33 @@
 
 .sidebar-link-subscription img {
     border-radius: 11px;
+}
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #AAAAAA;
+    font-weight: 500;
+}
+
+.sidebar-bottom-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5px 14px 5px 14px;
+    row-gap: 2px;
+}
+
+.sidebar-bottom-links {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.sidebar-copyright p {
+    padding: 5px 14px 5px 14px;
+    color: #5d5d5d;
+    font-weight: 400;
+    font-size: 11px;
+    cursor: default;
 }
